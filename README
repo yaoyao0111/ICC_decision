@@ -1,0 +1,11 @@
+#auther Yao.Y yyao64-c@my.cityu.edu.hk
+The data preprocessing and parameters estimation are included in data_fitting. The next step is formulating the ICC decision
+and train a deep reinforcement learning agent to learn the optimal ICC schedules.
+1, Using generate_patients.py to store information of training tcga skcm patients(n=200) and testing tcga patients(n=30).
+2, Using collect_off_tra.py to collect the trajectories of fixed ICC schedules and store them in buffer/Train_buffer_init_,
+    which can warm start the training of DDPG agent.
+3, Training the deep reinforcement learning agent by ddpg_runner.py, the trained agent will be final.pth and high.pth.
+    There are three trained agents, DRL_agent.pth, referred as examples.
+4, The trained DRL agent can be tested by fixed_policy_test.py, simultaneously compared with other fixed ICC schedules.
+
+
